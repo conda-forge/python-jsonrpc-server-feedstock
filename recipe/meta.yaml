@@ -1,5 +1,5 @@
 {% set name = "python-jsonrpc-server" %}
-{% set version = "0.0.2" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 533434fa982eb42c36ddb0b6758cef8e6eaf46d014f76b70a401b8790a3e6d57
+  sha256: 5fc6db89ea270ffa9a1318a26412ad463237b4191e68f300909f88886fa08ba6
 
 build:
   noarch: python
@@ -24,8 +24,8 @@ requirements:
 
 test:
   imports:
-    - jsonrpc
-    - jsonrpc.dispatchers
+    - pyls_jsonrpc
+    - pyls_jsonrpc.dispatchers
 
 about:
   home: https://github.com/palantir/python-jsonrpc-server
