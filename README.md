@@ -5,7 +5,7 @@ Home: https://github.com/palantir/python-jsonrpc-server
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A Python 2.7 and 3.4+ server implementation of the JSON RPC 2.0 protocol.
 

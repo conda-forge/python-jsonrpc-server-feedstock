@@ -1,5 +1,5 @@
 {% set name = "python-jsonrpc-server" %}
-{% set version = "0.3.4" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c73bf5495c9dd4d2f902755bedeb6da5afe778e0beee82f0e195c4655352fe37
+  sha256: 62c543e541f101ec5b57dc654efc212d2c2e3ea47ff6f54b2e7dcb36ecf20595
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
@@ -21,7 +21,7 @@ requirements:
   run:
     - python
     - future
-    - ujson <=1.35
+    - ujson >=3.0.0
 
 test:
   requires:
@@ -37,7 +37,7 @@ about:
   license: MIT
   license_file: LICENSE
   license_family: MIT
-  summary: 'A Python 2.7 and 3.4+ server implementation of the JSON RPC 2.0 protocol.'
+  summary: A Python 2.7 and 3.4+ server implementation of the JSON RPC 2.0 protocol.
   dev_url: https://github.com/palantir/python-jsonrpc-server
 
 extra:
